@@ -1,7 +1,9 @@
-from typing import List
 import uuid
+
+from typing import List
 from src.tasks.domain.task import Task
 from src.tasks.domain.task_port import TaskPort
+
 
 class TaskAdapter(TaskPort):
     tasks: List[Task] = []

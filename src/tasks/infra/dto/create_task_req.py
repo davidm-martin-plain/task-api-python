@@ -1,5 +1,6 @@
-from dataclasses import dataclass
 import uuid
+
+from dataclasses import dataclass
 from pydantic import BaseModel
 from src.tasks.domain.task import Task, TaskStatus
 
