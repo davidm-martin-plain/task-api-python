@@ -10,3 +10,7 @@ class TaskPort(ABC):
     @abstractmethod
     def save(self, task: Task) -> Task:
         pass
+
+    @abstractmethod
+    def delete(self, id: uuid.UUID) -> None:
+        pass

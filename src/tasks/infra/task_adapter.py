@@ -14,3 +14,6 @@ class TaskAdapter(TaskPort):
     def save(self, task: Task) -> Task:
         self.tasks.append(task)
         return task
+    
+    def delete(self, id: uuid.UUID) -> None:
+        self.tasks = [task for task in self.tasks if task.id != id]

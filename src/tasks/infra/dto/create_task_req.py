@@ -1,10 +1,8 @@
 import uuid
 
-from dataclasses import dataclass
 from pydantic import BaseModel
 from src.tasks.domain.task import Task, TaskStatus
 
-@dataclass
 class CreateTaskReq(BaseModel):
     name: str
     description: str
