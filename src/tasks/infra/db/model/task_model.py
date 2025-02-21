@@ -4,11 +4,13 @@ from sqlmodel import Field, SQLModel
 from src.tasks.domain.task import Task
 
 
-class TaskModel(SQLModel, table=True, schema="tasks"):
+class TaskModel(SQLModel, table=True):
     id: uuid.UUID = Field(primary_key=True)
     name: str = Field()
     task_status: str = Field()
     description: str | None = Field(default=None)
+
+    __tablename__: str = "tasks"
 
     @staticmethod
     def from_task(task: Task):
