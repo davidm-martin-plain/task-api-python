@@ -4,7 +4,7 @@ from src.tasks.domain.task import Task
 
 class TaskPort(ABC):
     @abstractmethod
-    def get(self, id: uuid.UUID) -> Task:
+    def get(self, id: uuid.UUID) -> Task | None:
         pass
 
     @abstractmethod

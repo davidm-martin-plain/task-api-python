@@ -70,3 +70,6 @@ docker-compose.yml
 
 # Ignore README file
 README.md
+
+# Ignore Github Actions
+.github
